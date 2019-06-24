@@ -44,7 +44,7 @@ class ImageGalleryViewController: UIViewController, UIDropInteractionDelegate {
             
         }
     }
-    @IBOutlet weak var emojiArtView: ImageGalleryView!
+    @IBOutlet weak var emojiArtView: EmojiArtView!
 }
 
  

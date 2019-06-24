@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageGalleryDocumentTableViewController: UITableViewController
+class EmojiArtDocumentTableViewController: UITableViewController
 {
     var emojiArtDocuments = ["One", "Two", "Three"]
 
@@ -33,6 +33,13 @@ class ImageGalleryDocumentTableViewController: UITableViewController
         cell.textLabel?.text = emojiArtDocuments[indexPath.row]
 
         return cell
+    }
+    
+    
+  
+    @IBAction func newEmojiArt(_ sender: UIBarButtonItem) {
+        emojiArtDocuments += ["Untitled".madeUnique(withRespectTo: emojiArtDocuments)]
+        tableView.reloadData()
     }
     
 

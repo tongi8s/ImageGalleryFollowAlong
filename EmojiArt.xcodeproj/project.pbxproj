@@ -14,9 +14,9 @@
 		D600DE2622BB30CE00718571 /* EmojiArtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600DE2522BB30CE00718571 /* EmojiArtTests.swift */; };
 		D600DE3122BB30CE00718571 /* EmojiArtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600DE3022BB30CE00718571 /* EmojiArtUITests.swift */; };
 		D600DE4022BB321500718571 /* EmojiArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600DE3F22BB321500718571 /* EmojiArtViewController.swift */; };
-		D600DE4222BB32D400718571 /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600DE4122BB32D400718571 /* ImageGalleryView.swift */; };
+		D600DE4222BB32D400718571 /* EmojiArtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600DE4122BB32D400718571 /* EmojiArtView.swift */; };
 		D600DE4822BF4D5500718571 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600DE4722BF4D5500718571 /* Utilities.swift */; };
-		D600DE4C22C0EE9D00718571 /* ImageGalleryDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600DE4B22C0EE9D00718571 /* ImageGalleryDocumentTableViewController.swift */; };
+		D600DE4C22C0EE9D00718571 /* EmojiArtDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600DE4B22C0EE9D00718571 /* EmojiArtDocumentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +50,9 @@
 		D600DE3022BB30CE00718571 /* EmojiArtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtUITests.swift; sourceTree = "<group>"; };
 		D600DE3222BB30CE00718571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D600DE3F22BB321500718571 /* EmojiArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtViewController.swift; sourceTree = "<group>"; };
-		D600DE4122BB32D400718571 /* ImageGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryView.swift; sourceTree = "<group>"; };
+		D600DE4122BB32D400718571 /* EmojiArtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtView.swift; sourceTree = "<group>"; };
 		D600DE4722BF4D5500718571 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		D600DE4B22C0EE9D00718571 /* ImageGalleryDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryDocumentTableViewController.swift; sourceTree = "<group>"; };
+		D600DE4B22C0EE9D00718571 /* EmojiArtDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocumentTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				D600DE1422BB30CD00718571 /* Main.storyboard */,
-				D600DE4B22C0EE9D00718571 /* ImageGalleryDocumentTableViewController.swift */,
-				D600DE4122BB32D400718571 /* ImageGalleryView.swift */,
+				D600DE4B22C0EE9D00718571 /* EmojiArtDocumentTableViewController.swift */,
+				D600DE4122BB32D400718571 /* EmojiArtView.swift */,
 				D600DE4722BF4D5500718571 /* Utilities.swift */,
 				D600DE3F22BB321500718571 /* EmojiArtViewController.swift */,
 				D600DE3E22BB311600718571 /* supporting files */,
@@ -273,11 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D600DE4C22C0EE9D00718571 /* ImageGalleryDocumentTableViewController.swift in Sources */,
+				D600DE4C22C0EE9D00718571 /* EmojiArtDocumentTableViewController.swift in Sources */,
 				D600DE1122BB30CD00718571 /* AppDelegate.swift in Sources */,
 				D600DE4022BB321500718571 /* EmojiArtViewController.swift in Sources */,
 				D600DE4822BF4D5500718571 /* Utilities.swift in Sources */,
-				D600DE4222BB32D400718571 /* ImageGalleryView.swift in Sources */,
+				D600DE4222BB32D400718571 /* EmojiArtView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

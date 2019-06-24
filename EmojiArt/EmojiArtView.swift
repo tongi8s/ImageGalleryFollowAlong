@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageGalleryView: UIView
+class EmojiArtView: UIView
 {
 
     var backgroundImage: UIImage? { didSet {setNeedsDisplay() } }
