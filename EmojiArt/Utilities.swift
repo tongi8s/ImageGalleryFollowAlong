@@ -27,6 +27,35 @@ class ImageFetcher
     //   otherwise the result of the fetch will be discarded and the handler never called.
     // In other words, keeping a strong pointer to your instance says "I'm still interested in its result."
     
+    
+    private struct CacheSizes {
+        static let cacheSize = 300000000 //100 3MB pictures
+        static let memCacheSize = 30000000 //10 3MB pictures
+    }
+    
+    
+    
+    static let urlSession: URLSession = {
+        let config = URLSessionConfiguration.default
+        config.urlCache = URLCache(memoryCapacity: CacheSizes.memCacheSize, diskCapacity: CacheSizes.cacheSize, diskPath: "images")
+        let session = URLSession(configuration: config)
+        return session
+    }()
+    
+    static func fetchAndCache(with url: URL, completionHandler: @escaping (UIImage?, Error?) -> Void) {
+        (urlSession.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                completionHandler(nil, error)
+            } else if let imageData = data {
+                completionHandler(UIImage(data: imageData), nil)
+            } else {
+                print("No error or data????")
+                completionHandler(nil,nil)
+            }
+        }).resume()
+        
+    }
+    
     var backup: UIImage? { didSet { callHandlerIfNeeded() } }
     
     func fetch(_ url: URL) {
@@ -119,7 +148,7 @@ extension UIImage
     }
     
     func storeLocallyAsJPEG(named name: String) -> URL? {
-        if let imageData = UIImageJPEGRepresentation(self, 1.0) {
+        if let imageData = self.jpegData(compressionQuality: 1.0) {
             if let url = UIImage.urlToStoreLocallyAsJPEG(named: name) {
                 do {
                     try imageData.write(to: url)
@@ -165,7 +194,7 @@ extension NSAttributedString {
 }
 
 extension String {
-    func attributedString(withTextStyle style: UIFontTextStyle, ofSize size: CGFloat) -> NSAttributedString {
+    func attributedString(withTextStyle style: UIFont.TextStyle, ofSize size: CGFloat) -> NSAttributedString {
         let font = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont.preferredFont(forTextStyle: .body).withSize(size))
         return NSAttributedString(string: self, attributes: [.font:font])
     }
